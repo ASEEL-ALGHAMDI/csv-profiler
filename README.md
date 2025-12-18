@@ -58,19 +58,21 @@ Each run generates:
 
 ## Project Structure
 
+```text
 csv-profiler/
-├── app.py                 # Streamlit UI
-├── main.py                # CLI entry point
-├── pyproject.toml
-├── data/
-│   └── sample.csv
-├── outputs/
-├── src/csv_profiler/
-│   ├── cli.py
-│   ├── io.py
-│   ├── models.py
-│   ├── profiling.py
-│   └── render.py
+├─ app.py                # Streamlit web interface
+├─ main.py               # CLI entry point (Typer)
+├─ pyproject.toml        # Project metadata and dependencies
+├─ data/
+│  └─ sample.csv         # Example input file
+├─ outputs/              # Generated reports
+└─ src/
+   └─ csv_profiler/
+      ├─ cli.py          # CLI command definitions
+      ├─ io.py           # File input/output handling
+      ├─ models.py       # Data models and schemas
+      ├─ profiling.py   # Core profiling logic
+      └─ render.py      # Report rendering (JSON / Markdown)
 ---
 
 ## Requirements
