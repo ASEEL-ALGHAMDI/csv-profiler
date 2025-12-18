@@ -1,0 +1,12 @@
+[project]
+name = "csv-profiler"
+version = "0.1.0"
+description = "Simple CSV profiling CLI tool"
+requires-python = ">=3.9"
+dependencies = [
+    "typer",
+    "rich",
+]
+
+[project.scripts]
+csv-profiler = "csv_profiler.cli:app"

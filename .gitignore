@@ -1,0 +1,24 @@
+pycache/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+Virtual Environments
+.venv/
+venv/
+
+Streamlit
+.streamlit/
+
+Generated outputs
+outputs/
+report.md
+report.json
+
+OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
