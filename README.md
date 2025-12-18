@@ -1,40 +1,67 @@
 CSV Profiler
 
-CSV Profiler is a lightweight command-line tool for profiling CSV files.
-It reads a CSV file and generates simple profiling reports in JSON and Markdown formats.
+CSV Profiler is a lightweight Python tool for quickly analyzing CSV files and generating clear data profiling reports.
+It supports both a command-line interface (CLI) and an interactive Streamlit web UI.
 
-The CLI is built with Typer, which allows the entire project to be executed using a single command-line entry point.
-More about Typer: https://typer.tiangolo.com/
+The CLI is built with Typer, allowing the entire project to run from a single, clean command-line entry point.
+Learn more about Typer: https://typer.tiangolo.com/
 
-⸻
+⸻⸻⸻
 
+Features
+	•	One-command CSV profiling via CLI
+	•	Interactive Streamlit web interface
+	•	Column-level statistics (type, missing values, uniqueness)
+	•	Summary metrics and charts
+	•	Export results as JSON and Markdown
+	•	Clean project structure, ready for extension
+⸻⸻⸻
 Installation
-
 pipx install csv-profiler
 
-⸻
+Or for local development:
+pip install -e .
+⸻⸻⸻
+CLI Usage
 
-Usage
+Run the profiler with a single command:csv-profiler path/to/file.csv
 
-Run the profiler with a single command:
+Example: csv-profiler data/sample.csv --out-dir outputs --report-name report
 
-csv-profiler path/to/file.csv
+This generates profiling reports in the specified output directory.
+⸻⸻⸻
+Streamlit UI
 
-Example:
+Launch the web interface: streamlit run app.py
 
-csv-profiler data/sample.csv –out-dir outputs –report-name report
-
-⸻
-
+From the UI you can:
+	•	Upload a CSV file
+	•	View metrics cards and charts
+	•	Inspect column profiles
+	•	Download reports as JSON or Markdown
+⸻⸻⸻
 Output
 
-The command generates two files:
+Each run generates:
+	•	report.json — structured profiling data
+	•	report.md — human-readable summary
+⸻⸻⸻
+Project Structure
 
-report.json
-report.md
-
-⸻
-
+csv-profiler/
+├── app.py                 # Streamlit UI
+├── main.py                # CLI entry point
+├── pyproject.toml
+├── data/
+│   └── sample.csv
+├── outputs/
+├── src/csv_profiler/
+│   ├── cli.py
+│   ├── io.py
+│   ├── models.py
+│   ├── profiling.py
+│   └── render.py
+⸻⸻⸻
 Requirements
 
 Python 3.9+
